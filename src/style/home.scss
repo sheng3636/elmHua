@@ -8,13 +8,13 @@
   @include ct;
 }
 
-.city_nav {
+.cityNav {
   padding-top: 2.35rem;
   border-top: 1px solid $bc;
   background-color: #fff;
   margin-bottom: 0.4rem;
 
-  .city_tip {
+  .cityTip {
     @include fj;
     line-height: 1.45rem;
     padding: 0 0.45rem;
@@ -30,7 +30,7 @@
 
   }
 
-  .guess_city {
+  .guessCity {
     @include fj;
     align-items: center;
     height: 1.8rem;
@@ -43,14 +43,14 @@
       color: $blue;
     }
 
-    .arrow_right {
+    .arrowRight {
       @include wh(.6rem, .6rem);
       fill: #999;
     }
   }
 }
 
-#hot_city_container {
+#hotCityContainer {
   background-color: #fff;
   margin-bottom: 0.4rem;
 }
@@ -71,7 +71,7 @@
   }
 }
 
-.city_title {
+.cityTitle {
   color: #666;
   font-weight: 400;
   text-indent: 0.45rem;
@@ -84,12 +84,12 @@
   }
 }
 
-.letter_classify_li {
+.letterClassifyLi {
   margin-bottom: 0.4rem;
   background-color: #fff;
   border-bottom: 1px solid $bc;
 
-  .groupcity_name_container {
+  .groupcityNameContainer {
     li {
       color: #666;
     }

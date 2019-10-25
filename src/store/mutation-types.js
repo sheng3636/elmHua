@@ -1,0 +1,1 @@
+export const GET_USERINFO = 'GET_USERINFO' // 获取用户信息

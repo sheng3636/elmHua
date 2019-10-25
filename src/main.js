@@ -3,11 +3,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routes from './router/router'
+import store from './store/store'
 import {
   routerMode
 } from './config/env'
 import './config/rem'
-
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 const router = new VueRouter({
@@ -32,5 +32,6 @@ const router = new VueRouter({
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router
+  router,
+  store
 })

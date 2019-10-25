@@ -215,7 +215,7 @@ module.exports = {
     // 禁止使用八进制转义符
     'no-octal-escape': 2,
     // 禁止对函数的参数重新赋值
-    'no-param-reassign': 2,
+    'no-param-reassign': 0,
     // 禁止使用 __proto__
     'no-proto': 2,
     // 禁止重复声明
