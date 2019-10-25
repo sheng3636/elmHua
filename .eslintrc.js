@@ -120,7 +120,7 @@ module.exports = {
     'class-methods-use-this': 2,
     // 禁止函数 if ... else if ... else 的复杂度超过 20
     'complexity': [2, {
-      "max": 2
+      "max": 20
     }],
     // 禁止函数在不同条件下返回不同类型的值
     // @off 有时候会希望通过参数获取不同类型的返回值
@@ -400,7 +400,7 @@ module.exports = {
     // 必须只使用函数申明或只使用函数表达式
     'func-style': 0,
     // id 黑名单
-    'id-blacklist': ["error", "err", "e", "cb", "callback"],
+    'id-blacklist': 0,
     // 变量名长度限制
     // @off 长度不是重点，清晰易读才是关键
     'id-length': 0,

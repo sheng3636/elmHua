@@ -1,42 +1,34 @@
 <template>
-  <div id="app">
-    <div class="outer">
-      <div class="inner"></div>
-    </div>
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div>
+    <transition name="router-fade" mode="out-in">
+      <keep-alive>
+        <router-view v-if="$route.meta.keepAlive"></router-view>
+      </keep-alive>
+    </transition>
+    <transition name="router-fade" mode="out-in">
+      <router-view v-if="!$route.meta.keepAlive"></router-view>
+    </transition>
+    <svg-icon></svg-icon>
   </div>
 </template>
 
 <script>
+import svgIcon from './components/common/svg';
 export default {
-  name: 'App'
-}
+  components: {
+    svgIcon
+  }
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "./style/common";
+.router-fade-enter-active,
+.router-fade-leave-active {
+  transition: opacity 0.3s;
 }
-.outer{
-  position: relative;
-  margin:0 auto;
-  width:300px;
-  height: 300px;
-  background: #2c3e50;
-  .inner{
-    position: absolute;
-    margin-left: 50%;
-    margin-top: 50%;
-    transform: translate(-50%,-50%);
-    width: 200px;
-    height: 200px;
-    background: #fff;
-  }
+.router-fade-enter,
+.router-fade-leave-active {
+  opacity: 0;
 }
 </style>
